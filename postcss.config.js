@@ -3,7 +3,7 @@ const {
   media,
   opacity,
   typography,
-} = require("./src/@monospaced/modern/tokens");
+} = require("./src/v1/@monospaced/modern/tokens");
 
 module.exports = () => ({
   plugins: {

@@ -2,7 +2,7 @@ import React from "react";
 import { withKnobs } from "@storybook/addon-knobs";
 import { addDecorator, addParameters, configure } from "@storybook/react";
 
-import Modern, { mdxComponents } from "../src/@monospaced/modern";
+import Modern, { mdxComponents } from "../src/v1/@monospaced/modern";
 
 import theme from "./theme";
 
@@ -31,6 +31,12 @@ addParameters({
 addDecorator(styles);
 addDecorator(withKnobs);
 configure(
-  [require.context("../src/@monospaced/modern", true, /\.stories\.(js|mdx)$/)],
+  [
+    require.context(
+      "../src/v1/@monospaced/modern",
+      true,
+      /\.stories\.(js|mdx)$/,
+    ),
+  ],
   module,
 );

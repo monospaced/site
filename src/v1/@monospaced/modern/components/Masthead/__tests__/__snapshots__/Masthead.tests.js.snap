@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Masthead component should render closed menu correctly 1`] = `
+<div>
+  <div
+    class="Masthead"
+  >
+    <span
+      class="Heading"
+    >
+      <a
+        class="Masthead-logo"
+        href="/v1/"
+      >
+        <div
+          aria-label="Logo"
+        />
+      </a>
+    </span>
+    <div
+      class="Masthead-menu"
+    >
+      <div
+        class="Masthead-menuButton"
+      >
+        <button
+          class="Button Button--styleFlat Button--withIcon Button--iconOnly"
+        >
+          <span
+            class="Button-icon"
+          >
+            <svg
+              aria-label="Menu"
+              fill="none"
+              height="100%"
+              role="img"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="3"
+                x2="21"
+                y1="12"
+                y2="12"
+              />
+              <line
+                x1="3"
+                x2="21"
+                y1="6"
+                y2="6"
+              />
+              <line
+                x1="3"
+                x2="21"
+                y1="18"
+                y2="18"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <nav
+        class="Masthead-nav"
+      >
+        <ul
+          class="Masthead-navList"
+        >
+          <li
+            class="Masthead-navItem"
+          >
+            <a
+              class="Masthead-navLink"
+              href="href"
+            >
+              foo
+            </a>
+          </li>
+          <li
+            class="Masthead-navItem"
+          >
+            <a
+              class="Masthead-navLink"
+              href="href"
+            >
+              bar
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Masthead component should render correctly 1`] = `
+<div>
+  <div
+    class="Masthead"
+  >
+    <span
+      class="Heading"
+    >
+      <a
+        class="Masthead-logo"
+      >
+        <div />
+      </a>
+    </span>
+    <div
+      class="Masthead-menu"
+    >
+      <div
+        class="Masthead-menuButton"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Masthead component should render heading level correctly 1`] = `
+<div>
+  <div
+    class="Masthead"
+  >
+    <h1
+      class="Heading"
+    >
+      <a
+        class="Masthead-logo"
+      >
+        <div />
+      </a>
+    </h1>
+    <div
+      class="Masthead-menu"
+    >
+      <div
+        class="Masthead-menuButton"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Masthead component should render links correctly 1`] = `
+<div>
+  <div
+    class="Masthead"
+  >
+    <span
+      class="Heading"
+    >
+      <a
+        class="Masthead-logo"
+      >
+        <div />
+      </a>
+    </span>
+    <div
+      class="Masthead-menu"
+    >
+      <div
+        class="Masthead-menuButton"
+      >
+        <button
+          class="Button Button--styleFlat Button--withIcon Button--iconOnly"
+        >
+          <span
+            class="Button-icon"
+          >
+            <svg
+              aria-label="Menu"
+              fill="none"
+              height="100%"
+              role="img"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="3"
+                x2="21"
+                y1="12"
+                y2="12"
+              />
+              <line
+                x1="3"
+                x2="21"
+                y1="6"
+                y2="6"
+              />
+              <line
+                x1="3"
+                x2="21"
+                y1="18"
+                y2="18"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <nav
+        class="Masthead-nav"
+      >
+        <ul
+          class="Masthead-navList"
+        >
+          <li
+            class="Masthead-navItem"
+          >
+            <a
+              class="Masthead-navLink"
+            >
+              foo
+            </a>
+          </li>
+          <li
+            class="Masthead-navItem"
+          >
+            <a
+              class="Masthead-navLink"
+              href="href"
+            >
+              bar
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Masthead component should render open menu correctly 1`] = `
+<div>
+  <div
+    class="Masthead Masthead--menuOpen"
+  >
+    <span
+      class="Heading"
+    >
+      <a
+        class="Masthead-logo"
+      >
+        <div />
+      </a>
+    </span>
+    <div
+      class="Masthead-menu"
+    >
+      <div
+        class="Masthead-menuButton"
+      >
+        <button
+          class="Button Button--styleFlat Button--withIcon Button--iconOnly"
+        >
+          <span
+            class="Button-icon"
+          >
+            <svg
+              aria-label="Close"
+              fill="none"
+              height="100%"
+              role="img"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="18"
+                x2="6"
+                y1="6"
+                y2="18"
+              />
+              <line
+                x1="6"
+                x2="18"
+                y1="6"
+                y2="18"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <nav
+        class="Masthead-nav"
+      >
+        <ul
+          class="Masthead-navList"
+        >
+          <li
+            class="Masthead-navItem"
+          >
+            <a
+              class="Masthead-navLink"
+              href="href"
+            >
+              foo
+            </a>
+          </li>
+          <li
+            class="Masthead-navItem"
+          >
+            <a
+              class="Masthead-navLink"
+              href="href"
+            >
+              bar
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Masthead component should render single link correctly 1`] = `
+<div>
+  <div
+    class="Masthead"
+  >
+    <span
+      class="Heading"
+    >
+      <a
+        class="Masthead-logo"
+      >
+        <div />
+      </a>
+    </span>
+    <div
+      class="Masthead-menu"
+    >
+      <div
+        class="Masthead-menuButton"
+      >
+        <a
+          href="href"
+        >
+          <button
+            class="Button Button--styleFlat Button--withIcon Button--iconOnly"
+          >
+            <span
+              class="Button-icon"
+            >
+              <svg
+                aria-label="Email"
+                fill="none"
+                height="100%"
+                role="img"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline
+                  points="22,6 12,13 2,6"
+                />
+              </svg>
+            </span>
+          </button>
+        </a>
+      </div>
+      <nav
+        class="Masthead-nav"
+      >
+        <ul
+          class="Masthead-navList"
+        >
+          <li
+            class="Masthead-navItem"
+          >
+            <a
+              class="Masthead-navLink"
+              href="href"
+            >
+              text
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+`;

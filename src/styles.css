@@ -1,0 +1,116 @@
+:root {
+  --background: #f5f1e8;
+  --border: #1a1714;
+  --foreground: #1a1714;
+  --muted: #6e665f;
+  --panel: rgba(255, 255, 255, 0.72);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(229, 98, 49, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(0, 96, 216, 0.14), transparent 32%),
+    linear-gradient(180deg, #fcfaf5 0%, var(--background) 100%);
+  color: var(--foreground);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    Georgia, serif;
+}
+
+body.is-ready {
+  transition: background-color 180ms ease-out;
+}
+
+.shell {
+  margin: 0 auto;
+  max-width: 52rem;
+  min-height: 100vh;
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono",
+    Menlo, monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.headline {
+  font-size: clamp(2.8rem, 8vw, 5.8rem);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin: 0;
+  max-width: 10ch;
+}
+
+.copy {
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+  line-height: 1.6;
+  margin: 1.5rem 0 0;
+  max-width: 36rem;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.button {
+  background: var(--foreground);
+  border: 1px solid var(--foreground);
+  border-radius: 999px;
+  color: #fff;
+  display: inline-flex;
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono",
+    Menlo, monospace;
+  font-size: 0.95rem;
+  min-height: 3rem;
+  padding: 0.85rem 1.2rem;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  background: var(--panel);
+  color: var(--foreground);
+}
+
+@media (max-width: 40rem) {
+  .shell {
+    padding-top: 2rem;
+  }
+
+  .headline {
+    max-width: 12ch;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+}

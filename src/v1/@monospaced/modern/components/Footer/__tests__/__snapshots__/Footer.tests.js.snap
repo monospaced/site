@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should render correctly 1`] = `
+<div>
+  <div
+    class="Footer"
+  >
+    <div
+      class="Footer-copyright"
+    >
+      ©
+      copyright
+       2022
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Footer component should render links correctly 1`] = `
+<div>
+  <div
+    class="Footer"
+  >
+    <div
+      class="Footer-copyright"
+    >
+      ©
+      copyright
+       2022
+    </div>
+    <ul
+      class="Footer-list"
+    >
+      <li
+        class="Footer-listItem"
+      >
+        <a
+          class="Footer-link"
+        >
+          foo
+        </a>
+      </li>
+      <li
+        class="Footer-listItem"
+      >
+        <a
+          class="Footer-link"
+          href="href"
+        >
+          bar
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,5 +1,5 @@
 import { create } from "@storybook/theming";
-import tokens from "../src/@monospaced/modern/tokens";
+import tokens from "../src/v1/@monospaced/modern/tokens";
 
 export default create({
   base: "light",

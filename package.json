@@ -23,7 +23,6 @@
     "classnames": "^2.2.6",
     "copy-webpack-plugin": "^4.5.2",
     "core-js": "^3.1.2",
-    "coveralls": "^3.0.3",
     "css-loader": "^1.0.0",
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
@@ -33,7 +32,6 @@
     "file-loader": "^2.0.0",
     "husky": "^1.0.0-rc.13",
     "jest": "^24.8.0",
-    "lighthouse": "^3.2.1",
     "mini-css-extract-plugin": "^0.4.2",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-cssnext": "^3.1.0",
@@ -64,7 +62,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn lint && yarn test && cat coverage/lcov.info | coveralls"
+      "pre-push": "yarn lint && yarn test"
     }
   },
   "jest": {
@@ -72,8 +70,7 @@
       "src/**/*.js",
       "!src/**/*.stories.js",
       "!src/**/*Story.js",
-      "!src/legacy/**/*.js",
-      "!src/index.js"
+      "!src/v1/index.js"
     ],
     "coverageReporters": [
       "lcov",
@@ -88,16 +85,13 @@
   },
   "scripts": {
     "build": "webpack -p --progress && yarn storybook:build",
-    "deploy": "yarn lint && yarn test && yarn build && bin/deploy.sh && yarn lighthouse:deploy",
+    "deploy": "yarn lint && yarn test && yarn build",
     "format": "prettier --write 'src/**/*.@(css|js)'",
-    "lighthouse": "lighthouse https://monospaced.com --chrome-flags=--headless --output=json",
-    "lighthouse:build": "yarn lighthouse --output=html --output-path=build/lighthouse",
-    "lighthouse:deploy": "yarn lighthouse:build --quiet && bin/deploy-lighthouse.sh",
     "lint": "eslint --ext js,json --ignore-path .eslintignore ./",
     "start": "webpack-dev-server --progress",
-    "storybook": "start-storybook --ci -p 9001 -s ./src/assets",
-    "storybook:build": "build-storybook --docs -o build/design-system",
-    "storybook:docs": "start-storybook --ci --docs -p 9001 -s ./src/assets",
+    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook --ci -p 9001 -s ./src/v1/assets",
+    "storybook:build": "NODE_OPTIONS=--openssl-legacy-provider build-storybook --docs -s ./src/v1/assets -o build/v1/design-system",
+    "storybook:docs": "NODE_OPTIONS=--openssl-legacy-provider start-storybook --ci --docs -p 9001 -s ./src/v1/assets",
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverage --changedSince=master"
   }
