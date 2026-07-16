@@ -1,6 +1,10 @@
 [build]
-  command = "yarn build"
-  publish = "build"
+  publish = "site"
+
+[[redirects]]
+  from = "/v1/*"
+  to = "/v1/404/"
+  status = 404
 
 [[redirects]]
   from = "/*"

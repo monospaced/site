@@ -1,3 +1,3 @@
 # Monospaced
 
-Isomorphic static site generator for [monospaced.com](https://monospaced.com)
+Website for [monospaced.com](https://monospaced.com).
