@@ -1,5 +1,40 @@
 {
   "name": "monospaced",
   "version": "2.0.0.alpha-1",
-  "private": true
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "browserslist": [
+    "baseline widely available"
+  ],
+  "scripts": {
+    "catalog": "mkdir -p .vscode && cp node_modules/@monospaced/set-config/set.catalog.css .vscode/set.catalog.css",
+    "dev": "NODE_OPTIONS=\"--import tsx\" eleventy --serve",
+    "build": "NODE_OPTIONS=\"--import tsx\" eleventy",
+    "lint": "eslint .",
+    "lint:css": "stylelint \"src/**/*.css\" --allow-empty-input",
+    "postinstall": "pnpm run catalog",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@monospaced/set-assets": "^0.8.0",
+    "@monospaced/set-core": "^0.8.0",
+    "@monospaced/set-markdown": "^0.8.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@eslint/js": "^10.0.1",
+    "@monospaced/set-config": "^0.8.0",
+    "@monospaced/set-skills": "^0.8.0",
+    "@monospaced/set-tokens": "^0.8.0",
+    "@types/node": "^26.1.2",
+    "eslint": "^10.8.0",
+    "stylelint": "^17.14.1",
+    "tsx": "^4.23.11",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.66.0"
+  }
 }

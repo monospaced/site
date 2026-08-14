@@ -1,0 +1,7 @@
+# esbuild's postinstall is unneeded — tsx supplies its own binary via
+# platform optional-deps, and the build works with it disabled.
+allowBuilds:
+  esbuild: false
+# First-party packages are exempt from the minimum-release-age delay.
+minimumReleaseAgeExclude:
+  - "@monospaced/*"
