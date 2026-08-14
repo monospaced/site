@@ -184,6 +184,7 @@ const renderBasePage = (data: BasePageData): string => {
   return `<!doctype html>
 <html lang="en">
 <head>
+<!-- deploy-preview smoke test — remove with this branch -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
