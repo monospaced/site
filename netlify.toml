@@ -1,0 +1,50 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/v1/*"
+  to = "/v1/404/"
+  status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Security headers, applied site-wide (including the /v1/ archive).
+# CSP allows 'unsafe-inline' for scripts and styles because pages ship an
+# inline module bootstrap + theme script and Set emits inline style
+# attributes (and the v1 archive has its own inline script/styles);
+# tighten with hashes/nonces later. Cloudinary is our image/media host.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "geolocation=(), camera=(), microphone=()"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: https://res.cloudinary.com; media-src 'self' https://res.cloudinary.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'"
+
+[[headers]]
+  for = "/v1/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Unhashed shared assets change between deploys — revalidate.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Unhashed site stylesheet changes between deploys — revalidate.
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Subset font files are content-stable — safe to cache long.
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -1,0 +1,22 @@
+/* Site-specific structures composed alongside Set components. Values come
+   from Set tokens; breakpoints are written literally because media queries
+   cannot read custom properties. */
+
+/* Header utility cluster: nav before lightswitch in the DOM. Mobile-first —
+   the base rule reverses the row so the collapsed nav expander sits in the
+   top corner; from tablet up (48em, --set-breakpoint-tablet) it restores
+   DOM order with a wider gap. Candidate for promotion to Set as Inline
+   `reverse: "belowTablet"` if it proves out. */
+.site-header-utilities {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--set-spacing-horizontal-400);
+}
+
+@media (width >= 48em) {
+  .site-header-utilities {
+    flex-direction: row;
+    gap: calc(var(--set-typography-metric-default-cell-width) * 2);
+  }
+}

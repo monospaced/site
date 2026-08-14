@@ -1,0 +1,25 @@
+{
+  "links": [
+    {
+      "href": "https://www.are.na/mono-spaced",
+      "icon": "arena",
+      "label": "Are.na"
+    },
+    {
+      "href": "https://github.com/monospaced",
+      "icon": "github",
+      "label": "GitHub"
+    },
+    {
+      "href": "https://www.linkedin.com/in/scottboyle/",
+      "icon": "linkedin",
+      "label": "LinkedIn"
+    }
+  ],
+  "legal": {
+    "link": {
+      "href": "/legal/",
+      "label": "Legal"
+    }
+  }
+}
