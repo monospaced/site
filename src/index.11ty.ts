@@ -22,6 +22,7 @@ export default class Index {
   render(data: HomeData): string {
     return (
       renderSetImage({
+        adaptive: true,
         alt: "",
         fit: "fluid",
         priority: true,
@@ -30,32 +31,32 @@ export default class Index {
             height: 548,
             media: "(min-width: 64em)",
             srcSet:
-              "https://res.cloudinary.com/monospaced/image/upload/v1785952736/2026-05-17_11.06.23--cyan--21x9_aidxaq.png",
+              "https://res.cloudinary.com/monospaced/image/upload/v1787272476/2026-05-17_11.06.23--cyan--adaptive--21x9_xxfvz7.svg",
             width: 1280,
           },
           {
             height: 720,
             media: "(min-width: 48em)",
             srcSet:
-              "https://res.cloudinary.com/monospaced/image/upload/v1785952732/2026-05-17_11.06.23--cyan--16x9_foj4kd.png",
+              "https://res.cloudinary.com/monospaced/image/upload/v1787272477/2026-05-17_11.06.23--cyan--adaptive--16x9_kmgbi0.svg",
             width: 1280,
           },
           {
-            height: 854,
+            height: 1600,
             media: "(min-width: 30em)",
             srcSet:
-              "https://res.cloudinary.com/monospaced/image/upload/v1785952724/2026-05-17_11.06.23--cyan--3x2_fuailj.png",
+              "https://res.cloudinary.com/monospaced/image/upload/v1787272480/2026-05-17_11.06.23--cyan--adaptive--4x5_o4dqkq.svg",
             width: 1280,
           },
           {
             height: 1280,
             media: "(min-width: 24em)",
             srcSet:
-              "https://res.cloudinary.com/monospaced/image/upload/v1785952720/2026-05-17_11.06.23--cyan--1x1_szdwrh.png",
+              "https://res.cloudinary.com/monospaced/image/upload/v1787272484/2026-05-17_11.06.23--cyan--adaptive--1x1_wiiifw.svg",
             width: 1280,
           },
         ],
-        src: "https://res.cloudinary.com/monospaced/image/upload/v1785952728/2026-05-17_11.06.23--cyan--4x5_sq37yt.png",
+        src: "https://res.cloudinary.com/monospaced/image/upload/v1787272484/2026-05-17_11.06.23--cyan--adaptive--1x1_wiiifw.svg",
       }) +
       renderSetBox({
         paddingBlock: "lg",
