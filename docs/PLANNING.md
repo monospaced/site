@@ -14,6 +14,8 @@ What we could be working on next.
 
 Everything we could attempt given sufficient time and resources.
 
+- Rework homepage hero design
+
 ### Insights
 
 - Setup blog infra including RSS
