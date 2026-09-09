@@ -4,6 +4,7 @@ import {
   renderSetBox,
   renderSetContainer,
   renderSetHeading,
+  renderSetImage,
   renderSetProse,
   renderSetStack,
 } from "@monospaced/set-core";
@@ -37,6 +38,12 @@ export default class About {
               responsive: true,
               size: "4xl",
               text: data.title,
+            }) +
+            renderSetImage({
+              alt: "Portrait photo of Scott Boyle in front of a Monet water-lilies painting.",
+              height: 256,
+              src: "https://res.cloudinary.com/monospaced/image/upload/f_auto,q_auto,w_512/v1788956814/avatar-photo_hnu1cu.jpg",
+              width: 256,
             }) +
             renderSetProse({
               responsive: true,

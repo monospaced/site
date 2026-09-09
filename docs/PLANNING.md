@@ -14,8 +14,6 @@ What we could be working on next.
 
 Everything we could attempt given sufficient time and resources.
 
-- Rework homepage hero design
-
 ### Insights
 
 - Setup blog infra including RSS
@@ -31,7 +29,3 @@ Everything we could attempt given sufficient time and resources.
 ### Services
 
 - Write copy for diagnostic product
-
-### About
-
-- Add photo
