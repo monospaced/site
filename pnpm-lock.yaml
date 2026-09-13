@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@monospaced/set-assets':
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.14.0
+        version: 0.14.0
       '@monospaced/set-core':
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.14.0
+        version: 0.14.0
       '@monospaced/set-markdown':
-        specifier: ^0.13.0
-        version: 0.13.0(supports-color@10.2.2)
+        specifier: ^0.14.0
+        version: 0.14.0(supports-color@10.2.2)
     devDependencies:
       '@11ty/eleventy':
         specifier: ^3.1.6
@@ -25,14 +25,14 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.8.0(supports-color@10.2.2))
       '@monospaced/set-config':
-        specifier: ^0.13.0
-        version: 0.13.0(eslint@10.8.0(supports-color@10.2.2))(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))
+        specifier: ^0.14.0
+        version: 0.14.0(eslint@10.8.0(supports-color@10.2.2))(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))
       '@monospaced/set-skills':
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.14.0
+        version: 0.14.0
       '@monospaced/set-tokens':
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.14.0
+        version: 0.14.0
       '@types/node':
         specifier: ^26.1.2
         version: 26.1.2
@@ -372,26 +372,26 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@monospaced/set-assets@0.13.0':
-    resolution: {integrity: sha512-ggkWuTI1X4PDjLyqwpCdnKdERQMZI7Hu1a61+b06FI/96IuExSuzOnjxiwQTV3/5vVFApSWrPGL7DjDI3hmhQA==}
+  '@monospaced/set-assets@0.14.0':
+    resolution: {integrity: sha512-WK4f4gAF38MfzDQWa7vQeIQK38Vfeapm5Fh/mBO9+MgcFEr90JHTqubLanc9MIci6TXrrwpelfmmTPcx/c6abw==}
 
-  '@monospaced/set-config@0.13.0':
-    resolution: {integrity: sha512-qMhtBdTsEVNUk8wN0+vDDvDjht0hG5JaXOQqCG96ofAKu2HCbSTegVlA26BzjSV6cpiTcpxdEPAnD+nejCeW8w==}
+  '@monospaced/set-config@0.14.0':
+    resolution: {integrity: sha512-6ho+N2Rbv0b3TcscjQRLtalZbtX+DnIJKWCndoQ0UO47kxPlRB6cI37hvTOwjo7odadkn4dFE66BmQWmvG2Ong==}
     peerDependencies:
       eslint: ^10.0.0
       stylelint: ^17.0.0
 
-  '@monospaced/set-core@0.13.0':
-    resolution: {integrity: sha512-ggY45IZ/TCINDwGl5CjQqgZ4rNF9e8JcqfWHeymqX/rmpKIpBf3JymG1PJMyX5qos0q3LOlaTGomzhgvZZtFiA==}
+  '@monospaced/set-core@0.14.0':
+    resolution: {integrity: sha512-pUDxIyqYg2vq9GSnDwmc9YGy4U36o7cwxOLwx9nAKSWUYxhIl0uDtsbCuKCxAKC3D5urepp/z0w3KYtP5tFgtQ==}
 
-  '@monospaced/set-markdown@0.13.0':
-    resolution: {integrity: sha512-Whc8sW27GJ9KFCr4JzusN2UsejZNkXbDybmiI1LaELgb0J8yR0V8CKEWIhkyVYiLe46r4Y3pwtphJE7rKdMupQ==}
+  '@monospaced/set-markdown@0.14.0':
+    resolution: {integrity: sha512-O4Ad92/UKfD3d/wNZewD/AfpAiqrmNTV20DfnoZ0y3r5EdZL0r72n3BpsXFfLX9+G4Lwsn7wz16wRbIVZ21FXQ==}
 
-  '@monospaced/set-skills@0.13.0':
-    resolution: {integrity: sha512-hyHCxNy2YHUkCDKA5X1GOYXPQXohR6bA+ilTehohaPilUFlMiT4nQqt55leFG10UTYxoDTWMVQSY50/rWBK0Mw==}
+  '@monospaced/set-skills@0.14.0':
+    resolution: {integrity: sha512-7eEhzT5wAm+070aEn3+GbgGcMWTkhJjB26JNSfZ2cgN3zWNxb+QqkTJe0PPfecCpB8zGTVRHYRe68zkM67OcRg==}
 
-  '@monospaced/set-tokens@0.13.0':
-    resolution: {integrity: sha512-kRiL3LW48Mx3tJJiTVF70JCCrfnvTlYc5qtnv925sOaD6E7kgdnb4ZCo3+zmLtoeDCHjnpm5AJ4K8be7LJdInQ==}
+  '@monospaced/set-tokens@0.14.0':
+    resolution: {integrity: sha512-6ZIuO4Xix0vU+wiAVOEkeR8F95TANcHsNVDv3WkR32IfI1ojGaFWCG9JsRzw7EoYiblZQxhujhiVeBjB5ujgqA==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2148,9 +2148,9 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@monospaced/set-assets@0.13.0': {}
+  '@monospaced/set-assets@0.14.0': {}
 
-  '@monospaced/set-config@0.13.0(eslint@10.8.0(supports-color@10.2.2))(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))':
+  '@monospaced/set-config@0.14.0(eslint@10.8.0(supports-color@10.2.2))(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))':
     dependencies:
       eslint: 10.8.0(supports-color@10.2.2)
       eslint-plugin-simple-import-sort: 13.0.0(eslint@10.8.0(supports-color@10.2.2))
@@ -2160,11 +2160,11 @@ snapshots:
       stylelint-order: 8.1.1(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))
       stylelint-plugin-logical-css: 2.1.0(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))
 
-  '@monospaced/set-core@0.13.0':
+  '@monospaced/set-core@0.14.0':
     dependencies:
       tdesign-icons-svg: 0.4.5
 
-  '@monospaced/set-markdown@0.13.0(supports-color@10.2.2)':
+  '@monospaced/set-markdown@0.14.0(supports-color@10.2.2)':
     dependencies:
       deepmerge: 4.3.1
       rehype-color-chips: 0.2.0
@@ -2181,9 +2181,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@monospaced/set-skills@0.13.0': {}
+  '@monospaced/set-skills@0.14.0': {}
 
-  '@monospaced/set-tokens@0.13.0': {}
+  '@monospaced/set-tokens@0.14.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
