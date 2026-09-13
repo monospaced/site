@@ -26,6 +26,7 @@ export default class Index {
       { aspectRatio: "21x9", height: 548, media: "(min-width: 64em)" },
       { aspectRatio: "16x9", height: 720, media: "(min-width: 48em)" },
       { aspectRatio: "3x2", height: 853, media: "(min-width: 30em)" },
+      { aspectRatio: "1x1", height: 1280, media: "(min-width: 20em)" },
     ];
 
     return (
@@ -34,7 +35,6 @@ export default class Index {
         alt: "",
         animated: true,
         fit: "fluid",
-        height: 1280,
         leadSrc: `${image}--load-scan--1x1--{scheme}.webp`,
         priority: true,
         sources: aspects.map(({ aspectRatio, height, media }) => ({
@@ -47,7 +47,6 @@ export default class Index {
         })),
         src: `${image}--scan--1x1--{scheme}.webp`,
         still: `${image}--1x1--adaptive.svg`,
-        width: 1280,
       }) +
       renderSetBox({
         paddingBlock: "lg",
