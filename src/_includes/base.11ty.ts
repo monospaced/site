@@ -22,7 +22,7 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 // Social-share card image (OG/Twitter); requires an absolute URL.
 const OG_IMAGE =
-  "https://res.cloudinary.com/monospaced/image/upload/v1787272476/2026-05-17_11.06.23--cyan--mid--og_b7dq6t.png";
+  "https://res.cloudinary.com/monospaced/image/upload/v1789314683/2026-05-17_11.06.23--cyan--og--mid.png";
 
 export interface BasePageData {
   centerMain?: boolean;

@@ -20,43 +20,34 @@ export default class Index {
   }
 
   render(data: HomeData): string {
+    const image =
+      "https://res.cloudinary.com/monospaced/image/upload/2026-05-17_11.06.23--cyan";
+    const aspects = [
+      { aspectRatio: "21x9", height: 548, media: "(min-width: 64em)" },
+      { aspectRatio: "16x9", height: 720, media: "(min-width: 48em)" },
+      { aspectRatio: "3x2", height: 853, media: "(min-width: 30em)" },
+    ];
+
     return (
       renderSetImage({
         adaptive: true,
         alt: "",
+        animated: true,
         fit: "fluid",
+        height: 1280,
+        leadSrc: `${image}--load-scan--1x1--{scheme}.webp`,
         priority: true,
-        sources: [
-          {
-            height: 548,
-            media: "(min-width: 64em)",
-            srcSet:
-              "https://res.cloudinary.com/monospaced/image/upload/v1787272476/2026-05-17_11.06.23--cyan--adaptive--21x9_xxfvz7.svg",
-            width: 1280,
-          },
-          {
-            height: 720,
-            media: "(min-width: 48em)",
-            srcSet:
-              "https://res.cloudinary.com/monospaced/image/upload/v1787272477/2026-05-17_11.06.23--cyan--adaptive--16x9_kmgbi0.svg",
-            width: 1280,
-          },
-          {
-            height: 1600,
-            media: "(min-width: 30em)",
-            srcSet:
-              "https://res.cloudinary.com/monospaced/image/upload/v1787272480/2026-05-17_11.06.23--cyan--adaptive--4x5_o4dqkq.svg",
-            width: 1280,
-          },
-          {
-            height: 1280,
-            media: "(min-width: 24em)",
-            srcSet:
-              "https://res.cloudinary.com/monospaced/image/upload/v1787272484/2026-05-17_11.06.23--cyan--adaptive--1x1_wiiifw.svg",
-            width: 1280,
-          },
-        ],
-        src: "https://res.cloudinary.com/monospaced/image/upload/v1787272484/2026-05-17_11.06.23--cyan--adaptive--1x1_wiiifw.svg",
+        sources: aspects.map(({ aspectRatio, height, media }) => ({
+          height,
+          leadSrc: `${image}--load-scan--${aspectRatio}--{scheme}.webp`,
+          media,
+          srcSet: `${image}--scan--${aspectRatio}--{scheme}.webp`,
+          still: `${image}--${aspectRatio}--adaptive.svg`,
+          width: 1280,
+        })),
+        src: `${image}--scan--1x1--{scheme}.webp`,
+        still: `${image}--1x1--adaptive.svg`,
+        width: 1280,
       }) +
       renderSetBox({
         paddingBlock: "lg",

@@ -40,7 +40,7 @@ export default class About {
               text: data.title,
             }) +
             renderSetImage({
-              alt: "Portrait photo of Scott Boyle in front of a Monet water-lilies painting.",
+              alt: "Portrait photo of Scott Boyle.",
               height: 256,
               src: "https://res.cloudinary.com/monospaced/image/upload/f_auto,q_auto,w_512/v1788956814/avatar-photo_hnu1cu.jpg",
               width: 256,
