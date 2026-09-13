@@ -20,16 +20,16 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@monospaced/set-assets": "^0.14.0",
-    "@monospaced/set-core": "^0.14.0",
-    "@monospaced/set-markdown": "^0.14.0"
+    "@monospaced/set-assets": "^0.14.1",
+    "@monospaced/set-core": "^0.14.1",
+    "@monospaced/set-markdown": "^0.14.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
     "@eslint/js": "^10.0.1",
-    "@monospaced/set-config": "^0.14.0",
-    "@monospaced/set-skills": "^0.14.0",
-    "@monospaced/set-tokens": "^0.14.0",
+    "@monospaced/set-config": "^0.14.1",
+    "@monospaced/set-skills": "^0.14.1",
+    "@monospaced/set-tokens": "^0.14.1",
     "@types/node": "^26.1.2",
     "eslint": "^10.8.0",
     "stylelint": "^17.14.1",
