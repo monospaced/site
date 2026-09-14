@@ -23,10 +23,42 @@ export default class Index {
     const image =
       "https://res.cloudinary.com/monospaced/image/upload/2026-05-17_11.06.23--cyan";
     const aspects = [
-      { aspectRatio: "21x9", height: 548, media: "(min-width: 64em)" },
-      { aspectRatio: "16x9", height: 720, media: "(min-width: 48em)" },
-      { aspectRatio: "3x2", height: 853, media: "(min-width: 30em)" },
-      { aspectRatio: "1x1", height: 1280, media: "(min-width: 20em)" },
+      {
+        aspectRatio: "21x9--2560",
+        width: 2560,
+        height: 1096,
+        media: "(min-width: 80em)",
+      },
+      {
+        aspectRatio: "21x9",
+        width: 1280,
+        height: 548,
+        media: "(min-width: 64em)",
+      },
+      {
+        aspectRatio: "16x9",
+        width: 1280,
+        height: 720,
+        media: "(min-width: 48em)",
+      },
+      {
+        aspectRatio: "3x2",
+        width: 1280,
+        height: 852,
+        media: "(min-width: 40em)",
+      },
+      {
+        aspectRatio: "3x2--640",
+        width: 640,
+        height: 426,
+        media: "(min-width: 30em)",
+      },
+      {
+        aspectRatio: "1x1--640",
+        width: 640,
+        height: 640,
+        media: "(min-width: 20em)",
+      },
     ];
 
     return (
@@ -35,7 +67,7 @@ export default class Index {
         alt: "",
         animated: true,
         fit: "fluid",
-        leadSrc: `${image}--load-scan--1x1--{scheme}.webp`,
+        leadSrc: `${image}--load-scan--1x1--640--{scheme}.webp`,
         priority: true,
         sources: aspects.map(({ aspectRatio, height, media }) => ({
           height,
@@ -43,10 +75,9 @@ export default class Index {
           media,
           srcSet: `${image}--scan--${aspectRatio}--{scheme}.webp`,
           still: `${image}--${aspectRatio}--adaptive.svg`,
-          width: 1280,
         })),
-        src: `${image}--scan--1x1--{scheme}.webp`,
-        still: `${image}--1x1--adaptive.svg`,
+        src: `${image}--scan--1x1--640--{scheme}.webp`,
+        still: `${image}--1x1--640--adaptive.svg`,
       }) +
       renderSetBox({
         paddingBlock: "lg",
