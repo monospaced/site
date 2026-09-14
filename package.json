@@ -31,6 +31,8 @@
     "@monospaced/set-skills": "^0.14.2",
     "@monospaced/set-tokens": "^0.14.2",
     "@types/node": "^26.1.2",
+    "browserslist-to-esbuild": "^2.1.1",
+    "esbuild": "^0.28.2",
     "eslint": "^10.8.0",
     "stylelint": "^17.14.1",
     "tsx": "^4.23.11",

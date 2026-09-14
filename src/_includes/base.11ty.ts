@@ -210,10 +210,7 @@ const renderBasePage = (data: BasePageData): string => {
 <link rel="stylesheet" href="/assets/set-core.css">
 <link rel="stylesheet" href="/styles.css">
 </head>
-<body>${root}<script type="module">
-import { defineSetComponents } from "/assets/set-core.js";
-defineSetComponents();
-</script></body>
+<body>${root}<script type="module" src="/assets/main.js"></script></body>
 </html>`;
 };
 
