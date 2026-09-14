@@ -67,16 +67,16 @@ export default class Index {
         alt: "",
         animated: true,
         fit: "fluid",
-        leadSrc: `${image}--load-scan--1x1--640--{scheme}.webp`,
+        leadSrc: `${image}--1x1--640--load-scan--{scheme}.webp`,
         priority: true,
         sources: aspects.map(({ aspectRatio, height, media }) => ({
           height,
-          leadSrc: `${image}--load-scan--${aspectRatio}--{scheme}.webp`,
+          leadSrc: `${image}--${aspectRatio}--load-scan--{scheme}.webp`,
           media,
-          srcSet: `${image}--scan--${aspectRatio}--{scheme}.webp`,
+          srcSet: `${image}--${aspectRatio}--scan--{scheme}.webp`,
           still: `${image}--${aspectRatio}--adaptive.svg`,
         })),
-        src: `${image}--scan--1x1--640--{scheme}.webp`,
+        src: `${image}--1x1--640--scan--{scheme}.webp`,
         still: `${image}--1x1--640--adaptive.svg`,
       }) +
       renderSetBox({
