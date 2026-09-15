@@ -65,7 +65,6 @@ export default class Index {
       renderSetImage({
         adaptive: true,
         alt: "",
-        animated: true,
         fit: "fluid",
         leadSrc: `${image}--1x1--640--load-scan--{scheme}.webp`,
         priority: true,
@@ -74,10 +73,10 @@ export default class Index {
           leadSrc: `${image}--${aspectRatio}--load-scan--{scheme}.webp`,
           media,
           srcSet: `${image}--${aspectRatio}--scan--{scheme}.webp`,
-          still: `${image}--${aspectRatio}--adaptive.svg`,
+          stillSrc: `${image}--${aspectRatio}--adaptive.svg`,
         })),
         src: `${image}--1x1--640--scan--{scheme}.webp`,
-        still: `${image}--1x1--640--adaptive.svg`,
+        stillSrc: `${image}--1x1--640--adaptive.svg`,
       }) +
       renderSetBox({
         paddingBlock: "lg",
