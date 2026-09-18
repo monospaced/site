@@ -12,6 +12,7 @@ import {
   renderSetStack,
   renderSetText,
   SET_LIGHTSWITCH_STORAGE_KEY,
+  type SetNavCurrent,
 } from "@monospaced/set-core";
 
 import { brandIcons } from "../_lib/icons";
@@ -20,7 +21,7 @@ import type { FooterData, FooterLink, NavData, SiteData } from "../_lib/types";
 // Stamped at build time; the footer copyright year refreshes on each build.
 const CURRENT_YEAR = new Date().getFullYear();
 
-// Social-share card image (OG/Twitter); requires an absolute URL.
+// Default social-share card image (OG/Twitter); requires an absolute URL.
 const OG_IMAGE =
   "https://res.cloudinary.com/monospaced/image/upload/v1789314683/2026-05-17_11.06.23--cyan--og--mid.png";
 
@@ -31,11 +32,30 @@ export interface BasePageData {
   description?: string;
   footer: FooterData;
   nav: NavData;
+  /** Per-page social preview image; falls back to the site-wide default. */
+  ogImage?: string;
   /** Eleventy-supplied current page data. */
   page?: { url?: string };
   site: SiteData;
   title?: string;
 }
+
+// A nav item is current on its own URL (`aria-current="page"`) and on any
+// URL nested under it (`aria-current="true"`), so /notes/<slug>/ still
+// highlights Notes. Section hrefs end in "/", which keeps the prefix match
+// from crossing into sibling paths.
+const navCurrent = (
+  href: string,
+  currentUrl?: string,
+): SetNavCurrent | undefined => {
+  if (href === currentUrl) {
+    return "page";
+  }
+  if (href !== "/" && currentUrl?.startsWith(href)) {
+    return "true";
+  }
+  return undefined;
+};
 
 const buildNav = (nav: NavData, currentUrl?: string): string =>
   renderSetNav({
@@ -44,7 +64,7 @@ const buildNav = (nav: NavData, currentUrl?: string): string =>
     expanderLabel: "Menu",
     expanderPosition: "end",
     items: nav.map((item) => ({
-      current: item.href === currentUrl,
+      current: navCurrent(item.href, currentUrl),
       href: item.href,
       label: item.label,
     })),
@@ -174,6 +194,12 @@ const renderBasePage = (data: BasePageData): string => {
   const title = data.title ? `${data.title} | ${site.title}` : site.title;
   const description = data.description ?? site.description;
   const canonical = `${site.url}${data.page?.url ?? "/"}`;
+  // OG images must be absolute URLs; site-relative paths get the site origin.
+  const ogImage = data.ogImage
+    ? data.ogImage.startsWith("/")
+      ? `${site.url}${data.ogImage}`
+      : data.ogImage
+    : OG_IMAGE;
   const attr = (value: string): string =>
     value
       .replaceAll("&", "&amp;")
@@ -196,15 +222,16 @@ const renderBasePage = (data: BasePageData): string => {
 <meta property="og:title" content="${attr(title)}">
 <meta property="og:description" content="${attr(description)}">
 <meta property="og:url" content="${attr(canonical)}">
-<meta property="og:image" content="${attr(OG_IMAGE)}">
+<meta property="og:image" content="${attr(ogImage)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${attr(title)}">
 <meta name="twitter:description" content="${attr(description)}">
-<meta name="twitter:image" content="${attr(OG_IMAGE)}">
+<meta name="twitter:image" content="${attr(ogImage)}">
 <link href="/assets/favicons/apple-touch-icon.png" rel="apple-touch-icon">
 <link href="/assets/favicons/favicon.ico" rel="icon" sizes="32x32">
 <link href="/assets/favicons/favicon.svg" rel="icon" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="${attr(site.title)}" href="/feed.xml">
 <link rel="preload" href="/assets/fonts/Berkeley Mono Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/set-core.css">

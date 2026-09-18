@@ -2,6 +2,13 @@
    from Set tokens; breakpoints are written literally because media queries
    cannot read custom properties. */
 
+/* The sticky header would otherwise cover targets of in-page anchor
+   navigation; keep scrolled-to headings below it. Sized to the header's
+   block size, which nothing exposes as a token yet. */
+html {
+  scroll-padding-block-start: 5.625rem;
+}
+
 /* Header utility cluster: nav before lightswitch in the DOM. Mobile-first —
    the base rule reverses the row so the collapsed nav expander sits in the
    top corner; from tablet up (48em, --set-breakpoint-tablet) it restores

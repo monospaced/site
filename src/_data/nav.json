@@ -4,6 +4,10 @@
     "label": "About"
   },
   {
+    "href": "/notes/",
+    "label": "Notes"
+  },
+  {
     "href": "/contact/",
     "label": "Contact"
   }

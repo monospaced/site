@@ -1,7 +1,8 @@
 /**
  * Brand icon markup for the Set link icon slot (24×24, `currentColor`).
  *
- * GitHub is the official Simple Icons glyph (https://simpleicons.org/).
+ * GitHub and RSS are the official Simple Icons glyphs
+ * (https://simpleicons.org/).
  * LinkedIn is the classic Simple Icons glyph from before its removal
  * (brand-guidelines takedown). Are.na has no Simple Icons entry; its mark
  * is the official logo path (150.38×88.986), scaled and vertically
