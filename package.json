@@ -20,16 +20,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@monospaced/set-assets": "^0.17.0",
-    "@monospaced/set-core": "^0.17.0",
-    "@monospaced/set-markdown": "^0.17.0"
+    "@monospaced/set-assets": "^0.18.0",
+    "@monospaced/set-core": "^0.18.0",
+    "@monospaced/set-markdown": "^0.18.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@eslint/js": "^10.0.1",
-    "@monospaced/set-config": "^0.17.0",
-    "@monospaced/set-skills": "^0.17.0",
-    "@monospaced/set-tokens": "^0.17.0",
+    "@monospaced/set-config": "^0.18.0",
+    "@monospaced/set-skills": "^0.18.0",
+    "@monospaced/set-tokens": "^0.18.0",
     "@types/node": "^26.1.2",
     "browserslist-to-esbuild": "^2.1.1",
     "esbuild": "^0.28.2",
