@@ -10,6 +10,8 @@ export interface LinkData {
 }
 
 export interface SiteData {
+  /** Feed author name. */
+  author: string;
   description: string;
   organization: string;
   title: string;
