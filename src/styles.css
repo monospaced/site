@@ -29,7 +29,7 @@ html {
 }
 
 .hero-logo {
-  display: grid;
+  display: none;
   inset: 0;
   place-items: center;
   position: absolute;
