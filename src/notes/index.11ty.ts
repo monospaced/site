@@ -76,6 +76,7 @@ export default class NotesIndex {
           children:
             renderSetHeading({
               level: 1,
+              opticalAlign: true,
               responsive: true,
               size: "4xl",
               text: data.title,
