@@ -24,6 +24,12 @@ export default class Index {
       "https://res.cloudinary.com/monospaced/image/upload/2026-05-17_11.06.23--cyan";
     const aspects = [
       {
+        aspectRatio: "3x1--2560",
+        width: 2560,
+        height: 854,
+        media: "(min-width: 90em)",
+      },
+      {
         aspectRatio: "21x9--2560",
         width: 2560,
         height: 1096,
