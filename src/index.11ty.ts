@@ -5,10 +5,11 @@ import {
   renderSetGridItem,
   renderSetHeading,
   renderSetImage,
+  renderSetLogo,
   renderSetText,
 } from "@monospaced/set-core";
 
-import type { HomeData } from "./_lib/types";
+import type { HomeData, SiteData } from "./_lib/types";
 
 export default class Index {
   data() {
@@ -19,7 +20,7 @@ export default class Index {
     };
   }
 
-  render(data: HomeData): string {
+  render(data: HomeData & { site: SiteData }): string {
     const image =
       "https://res.cloudinary.com/monospaced/image/upload/2026-05-17_11.06.23--cyan";
     const aspects = [
@@ -68,22 +69,29 @@ export default class Index {
     ];
 
     return (
-      renderSetImage({
-        adaptive: true,
-        alt: "",
-        fit: "fluid",
-        leadSrc: `${image}--1x1--640--load-scan--{scheme}.webp`,
-        priority: true,
-        sources: aspects.map(({ aspectRatio, height, media }) => ({
-          height,
-          leadSrc: `${image}--${aspectRatio}--load-scan--{scheme}.webp`,
-          media,
-          srcSet: `${image}--${aspectRatio}--scan--{scheme}.webp`,
-          stillSrc: `${image}--${aspectRatio}--adaptive.svg`,
-        })),
-        src: `${image}--1x1--640--scan--{scheme}.webp`,
-        stillSrc: `${image}--1x1--640--adaptive.svg`,
-      }) +
+      `<div style="position: relative;">${
+        renderSetImage({
+          adaptive: true,
+          alt: "",
+          fit: "fluid",
+          leadSrc: `${image}--1x1--640--load-scan--{scheme}.webp`,
+          priority: true,
+          sources: aspects.map(({ aspectRatio, height, media }) => ({
+            height,
+            leadSrc: `${image}--${aspectRatio}--load-scan--{scheme}.webp`,
+            media,
+            srcSet: `${image}--${aspectRatio}--scan--{scheme}.webp`,
+            stillSrc: `${image}--${aspectRatio}--adaptive.svg`,
+          })),
+          src: `${image}--1x1--640--scan--{scheme}.webp`,
+          stillSrc: `${image}--1x1--640--adaptive.svg`,
+        }) +
+        `<div class="hero-logo"><div>${renderSetLogo({
+          label: data.site.organization,
+          size: "fill",
+          variant: "secondary",
+        })}</div></div>`
+      }</div>` +
       renderSetBox({
         paddingBlock: "lg",
         paddingInline: "none",

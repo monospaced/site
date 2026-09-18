@@ -11,7 +11,6 @@ What we're working on now.
 What we could be working on next.
 
 - Add article hero image support
-- Improve home page hero?
 
 ### Note tags
 

@@ -27,3 +27,25 @@ html {
     gap: calc(var(--set-typography-metric-default-cell-width) * 2);
   }
 }
+
+.hero-logo {
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+
+  & > div {
+    inline-size: 38.2%;
+    margin-block-start: -20%;
+    /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
+    opacity: 0.84;
+
+    @media (width >= 30em) {
+      margin-block-start: -7%;
+    }
+
+    @media (width >= 48em) {
+      margin-block-start: 0;
+    }
+  }
+}
