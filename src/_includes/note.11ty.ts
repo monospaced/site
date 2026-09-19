@@ -51,6 +51,8 @@ export default class Note {
             colSpan: 8,
             colStart: 3,
             children: renderSetStack({
+              gap: "md",
+              responsive: true,
               children:
                 `<header>${renderSetStack({
                   gap: "md",
@@ -59,13 +61,12 @@ export default class Note {
                       level: 1,
                       responsive: true,
                       size: "2xl",
-                      text: data.title,
+                      children: data.title,
                     }) +
                     renderSetText({
                       as: "p",
                       monospaced: true,
                       size: "sm",
-                      tone: "muted",
                       children: dates,
                     }) +
                     renderSetText({
@@ -73,11 +74,11 @@ export default class Note {
                       responsive: true,
                       size: "lg",
                       children: data.summary,
-                    }) +
-                    renderSetDivider({
-                      tone: "brand",
                     }),
                 })}</header>` +
+                renderSetDivider({
+                  tone: "brand",
+                }) +
                 renderSetProse({
                   hangingPunctuation: "notebook",
                   responsive: true,

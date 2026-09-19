@@ -31,13 +31,14 @@ export default class Legal {
         paddingInline: "none",
         responsive: true,
         children: renderSetStack({
+          responsive: true,
           children:
             renderSetHeading({
               level: 1,
               opticalAlign: true,
               responsive: true,
               size: "4xl",
-              text: data.title,
+              children: data.title,
             }) +
             renderSetProse({
               responsive: true,

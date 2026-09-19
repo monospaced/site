@@ -106,7 +106,7 @@ export default class Index {
                   level: 1,
                   responsive: true,
                   size: "md",
-                  text: data.headline,
+                  children: data.headline,
                 }),
               }),
               renderSetGridItem({

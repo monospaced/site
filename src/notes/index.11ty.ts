@@ -29,25 +29,22 @@ const renderRow = (item: NoteItem): string =>
   `<li>${renderSetStack({
     gap: "none",
     children:
-      renderSetText({
-        as: "p",
+      renderSetHeading({
         children: processMarkdownInline(`[${item.data.title}](${item.url})`),
+        size: "md",
         responsive: true,
-        linkVisited: false,
       }) +
       renderSetText({
         as: "p",
         children: item.data.summary,
+        size: "md",
         responsive: true,
-        size: "xs",
       }) +
       renderSetText({
         as: "p",
-        children: `<time>${isoDate(item.date)}</time>`,
-        responsive: true,
-        monospaced: true,
-        size: "xs",
+        children: isoDate(item.date),
         tone: "muted",
+        size: "sm",
       }),
   })}</li>`;
 
@@ -58,8 +55,6 @@ export default class NotesIndex {
     return {
       layout: "base.11ty.ts",
       permalink: "/notes/",
-      summary:
-        "Notes and articles on UI systems, design engineering and modern front-end development.",
       title: "Notes",
     };
   }
@@ -72,18 +67,18 @@ export default class NotesIndex {
         paddingInline: "none",
         responsive: true,
         children: renderSetStack({
-          gap: "md",
+          responsive: true,
           children:
             renderSetHeading({
               level: 1,
               opticalAlign: true,
               responsive: true,
               size: "4xl",
-              text: data.title,
+              children: data.title,
             }) +
             renderSetStack({
               as: "ul",
-              gap: "lg",
+              responsive: true,
               children: data.collections.notes.map(renderRow).join(""),
             }),
         }),

@@ -31,13 +31,14 @@ export default class Contact {
         paddingInline: "none",
         responsive: true,
         children: renderSetStack({
+          responsive: true,
           children:
             renderSetHeading({
               level: 1,
               opticalAlign: true,
               responsive: true,
               size: "4xl",
-              text: data.title,
+              children: data.title,
             }) +
             renderSetProse({
               linkVisited: false,
