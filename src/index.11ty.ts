@@ -28,67 +28,61 @@ export default class Index {
         aspectRatio: "3x1--2560",
         width: 2560,
         height: 854,
-        media: "(min-width: 90em)",
-      },
+        media: "(min-width: 128em)", // 2048
+      }, // 1.6+
       {
-        aspectRatio: "21x9--2560",
-        width: 2560,
-        height: 1096,
-        media: "(min-width: 80em)",
-      },
+        aspectRatio: "3x1--1920",
+        width: 1920,
+        height: 640,
+        media: "(min-width: 90em)", // 1440
+      }, // 1.5–2.13
       {
         aspectRatio: "21x9",
         width: 1280,
         height: 548,
-        media: "(min-width: 64em)",
-      },
+        media: "(min-width: 64em)", // 1024
+      }, // 1.6–2.25
       {
-        aspectRatio: "16x9",
-        width: 1280,
-        height: 720,
-        media: "(min-width: 48em)",
-      },
-      {
-        aspectRatio: "3x2",
-        width: 1280,
-        height: 852,
-        media: "(min-width: 40em)",
-      },
+        aspectRatio: "16x9--960",
+        width: 960,
+        height: 540,
+        media: "(min-width: 48em)", // 768
+      }, // 1.6–2.13
       {
         aspectRatio: "3x2--640",
         width: 640,
         height: 426,
-        media: "(min-width: 30em)",
-      },
+        media: "(min-width: 30em)", // 480
+      }, // 1.5–2.4
       {
-        aspectRatio: "1x1--640",
-        width: 640,
-        height: 640,
-        media: "(min-width: 20em)",
-      },
+        aspectRatio: "1x1--480",
+        width: 480,
+        height: 480,
+        media: "(min-width: 20em)", // 320
+      }, // 1.33–2.0
     ];
 
     return (
       `<div style="position: relative;">${
         renderSetImage({
-          adaptive: true,
           alt: "",
           fit: "fluid",
-          leadSrc: `${image}--1x1--640--load-scan--{scheme}.webp`,
+          leadSrc: `${image}--1x1--480--load-scan--mid.webp`,
           priority: true,
           sources: aspects.map(({ aspectRatio, height, media }) => ({
             height,
-            leadSrc: `${image}--${aspectRatio}--load-scan--{scheme}.webp`,
+            leadSrc: `${image}--${aspectRatio}--load-scan--mid.webp`,
             media,
-            srcSet: `${image}--${aspectRatio}--scan--{scheme}.webp`,
-            stillSrc: `${image}--${aspectRatio}--adaptive.svg`,
+            srcSet: `${image}--${aspectRatio}--scan--mid.webp`,
+            stillSrc: `${image}--${aspectRatio}--mid.png`,
           })),
-          src: `${image}--1x1--640--scan--{scheme}.webp`,
-          stillSrc: `${image}--1x1--640--adaptive.svg`,
+          src: `${image}--1x1--480--scan--mid.webp`,
+          stillSrc: `${image}--1x1--480--mid.png`,
         }) +
         `<div class="hero-logo"><div>${renderSetLogo({
           label: data.site.organization,
           size: "fill",
+          tone: "neutral",
           variant: "secondary",
         })}</div></div>`
       }</div>` +

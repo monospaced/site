@@ -136,6 +136,7 @@ const buildFooter = (footer: FooterData, site: SiteData): string =>
               align: "end",
               children:
                 renderSetStack({
+                  align: "end",
                   gap: "none",
                   children:
                     renderSetLink({
