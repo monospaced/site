@@ -134,6 +134,7 @@ const buildFooter = (footer: FooterData, site: SiteData): string =>
             }) +
             renderSetInline({
               align: "end",
+              gap: "sm",
               children:
                 renderSetStack({
                   align: "end",
