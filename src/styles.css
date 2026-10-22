@@ -28,17 +28,6 @@ html {
   }
 }
 
-/* Safari 27 (macOS/iOS 27) reworked aspect-ratio intrinsic sizing for flex
-   items. Set component icon wrappers have only a block size and rely on
-   `aspect-ratio: 1 / 1` to derive their inline size, while its SVG child is
-   100% in both axes. Safari 27 now sizes the wrapper from that content, so
-   the toggle balloons and no longer shrink-wrap. Pin
-   the inline size explicitly; the header renders the md size only. Remove
-   once Set sets an inline size on the wrapper upstream. */
-.set-inline .icon-wrapper {
-  inline-size: var(--set-layout-icon-size-md);
-}
-
 .hero-logo {
   display: none;
   inset: 0;

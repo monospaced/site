@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@monospaced/set-assets':
-        specifier: ^0.19.1
-        version: 0.19.1
+        specifier: ^0.20.2
+        version: 0.20.2
       '@monospaced/set-core':
-        specifier: ^0.19.1
-        version: 0.19.1
+        specifier: ^0.20.2
+        version: 0.20.2
       '@monospaced/set-markdown':
-        specifier: ^0.19.1
-        version: 0.19.1(supports-color@10.2.2)
+        specifier: ^0.20.2
+        version: 0.20.2(supports-color@10.2.2)
     devDependencies:
       '@11ty/eleventy':
         specifier: ^3.1.6
@@ -28,14 +28,14 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.8.0(supports-color@10.2.2))
       '@monospaced/set-config':
-        specifier: ^0.19.1
-        version: 0.19.1(eslint@10.8.0(supports-color@10.2.2))(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))
+        specifier: ^0.20.2
+        version: 0.20.2(eslint@10.8.0(supports-color@10.2.2))(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))
       '@monospaced/set-skills':
-        specifier: ^0.19.1
-        version: 0.19.1
+        specifier: ^0.20.2
+        version: 0.20.2
       '@monospaced/set-tokens':
-        specifier: ^0.19.1
-        version: 0.19.1
+        specifier: ^0.20.2
+        version: 0.20.2
       '@types/node':
         specifier: ^26.1.2
         version: 26.1.2
@@ -384,26 +384,29 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@monospaced/set-assets@0.19.1':
-    resolution: {integrity: sha512-xVfOXFf6s8RpyiAc7g5o469ioTuuy82t2qdBaxCygoj0U+OmHoQlC1Sqkinn0VGVwx+Q/MKLlP+2ucQvHbIH/g==}
+  '@monospaced/set-assets@0.20.2':
+    resolution: {integrity: sha512-5FK8k+zTtF6PmxCYYI3UGD5mPNE4YU94AuEJpTpqNRa4MRxgUla7nIu5fb6YagTCjjziVKe+rm86yXkn42VV8A==}
 
-  '@monospaced/set-config@0.19.1':
-    resolution: {integrity: sha512-4ynXuQuIENgR+8ykXFvy4V1tIxwExSZ20UPzOVFDGwT11LlZoivjBk/F3mlLuG/z5ACLGttAWJUkmyJzli1a/A==}
+  '@monospaced/set-config@0.20.2':
+    resolution: {integrity: sha512-nK7FowRxrfRJIRlqMSiiS/yrdtQwgvhXxeg6RUErScKXPxasKOdtEDn6JLQymbcOlVoncuc5P2LtXLKAM4loKg==}
     peerDependencies:
       eslint: ^10.0.0
       stylelint: ^17.0.0
 
-  '@monospaced/set-core@0.19.1':
-    resolution: {integrity: sha512-REDgTzTIEAhDN2arXqtjwXd2iZ4+2Wvd5ahO89gOhLGHLDgYXgjX+8NZLdyRscfi+Bn1G9bMFrMtfc9Z4jB0yA==}
+  '@monospaced/set-core@0.20.2':
+    resolution: {integrity: sha512-XcAM8DNvqejsIDUSVCIzpU1tLuqm6PVjhFJ7tHxOE4vYfFDZOw4W8cqlx+gc1Ix72jXDGFKEi/Czlez4ZtJd9Q==}
 
-  '@monospaced/set-markdown@0.19.1':
-    resolution: {integrity: sha512-83PCLMjBMqC1dcwCLlCB+dMg09Q3Njx5lcEZ7aFULnPap09iv3vRsgEqqTng5ezi1UB5OG8xe6nndALjDogdiA==}
+  '@monospaced/set-icons@0.20.2':
+    resolution: {integrity: sha512-GDUg5rCxEI3Jhj2e8sTNjTyEsFY7EFTRuwXuhJT8/0TEmQHYI8/3En2oQE1UKu7kkzJNv20D4F6Rq0InrQ/2RA==}
 
-  '@monospaced/set-skills@0.19.1':
-    resolution: {integrity: sha512-LIZ7YJHuZ1fdTDOVZ8rm+ihoQRIzXFImFuEFivr1J3/RNUxhaqZlmNWcQOE72GMeN2p9HUFJ0sfejXVtohsunw==}
+  '@monospaced/set-markdown@0.20.2':
+    resolution: {integrity: sha512-ICBA+iwaEpoGWZ1SgbTvdtLCB2NQnanJSBqcdOE3SJLr7xTNL4pnkU9YnaoNid/IM4xuQyp686wknYLXBjjgxw==}
 
-  '@monospaced/set-tokens@0.19.1':
-    resolution: {integrity: sha512-m6i/l5FBr6uJzCBJTpBvvos0K5Dz/n3mOnDW7y8BdnwJxqaAVJaFrqmlkhlSDeUExgGhWfjf4IX8oceXyULeEg==}
+  '@monospaced/set-skills@0.20.2':
+    resolution: {integrity: sha512-OvQ0IuuSENqGGAhuSqD5RUP7lT6DpH6Twg0htXZxh9IEA2VRoItmvFgg1aHGdkD3CETz/LCv/sGa8xESTL0m6w==}
+
+  '@monospaced/set-tokens@0.20.2':
+    resolution: {integrity: sha512-IVRkUmFv1C+ZzB9HP2T61EaFOrLRtD/PzI6hyTsLc3O49DcbyFSP9rf9UEdpr9OPALjLt8+SEC6CzAC7saG1XQ==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2091,9 +2094,6 @@ packages:
     resolution: {integrity: sha512-9kY+CygyYM6j02t5YFHbNz2FN5QmYGv9zAjVp4lCDjlCw7amdckXlEt/bjMhUIfj4ThGRE4gCUH5+yGnNuPo5A==}
     engines: {node: '>=10.0.0'}
 
-  tdesign-icons-svg@0.4.7:
-    resolution: {integrity: sha512-8aq24OEdpH8byPONyH2HONvZYbahea2Sn9wwOK/nYvD9wmlizqaGiYsUBB3Gfs1kmPwFXTv/tx9QtmfcIjEaGQ==}
-
   tinyglobby@0.2.17:
     resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
     engines: {node: '>=12.0.0'}
@@ -2574,9 +2574,9 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@monospaced/set-assets@0.19.1': {}
+  '@monospaced/set-assets@0.20.2': {}
 
-  '@monospaced/set-config@0.19.1(eslint@10.8.0(supports-color@10.2.2))(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))':
+  '@monospaced/set-config@0.20.2(eslint@10.8.0(supports-color@10.2.2))(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))':
     dependencies:
       eslint: 10.8.0(supports-color@10.2.2)
       eslint-plugin-simple-import-sort: 13.0.0(eslint@10.8.0(supports-color@10.2.2))
@@ -2586,11 +2586,13 @@ snapshots:
       stylelint-order: 8.1.1(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))
       stylelint-plugin-logical-css: 2.1.0(stylelint@17.14.1(supports-color@10.2.2)(typescript@6.0.3))
 
-  '@monospaced/set-core@0.19.1':
+  '@monospaced/set-core@0.20.2':
     dependencies:
-      tdesign-icons-svg: 0.4.7
+      '@monospaced/set-icons': 0.20.2
 
-  '@monospaced/set-markdown@0.19.1(supports-color@10.2.2)':
+  '@monospaced/set-icons@0.20.2': {}
+
+  '@monospaced/set-markdown@0.20.2(supports-color@10.2.2)':
     dependencies:
       deepmerge: 4.3.1
       rehype-color-chips: 0.2.0
@@ -2607,9 +2609,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@monospaced/set-skills@0.19.1': {}
+  '@monospaced/set-skills@0.20.2': {}
 
-  '@monospaced/set-tokens@0.19.1': {}
+  '@monospaced/set-tokens@0.20.2': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -4732,8 +4734,6 @@ snapshots:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
-
-  tdesign-icons-svg@0.4.7: {}
 
   tinyglobby@0.2.17:
     dependencies:
